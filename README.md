@@ -1,1 +1,1 @@
-# laba7_jenkins_sonarqube
+# jenkins + sonarqube
