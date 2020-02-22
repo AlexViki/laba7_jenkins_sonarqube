@@ -21,6 +21,7 @@ node
 	{
 		script
 		{
+			echo '----BUILD----'
 			sh 'pwd'
 		}
 	}
