@@ -1,6 +1,6 @@
 # jenkins + sonarqube
 
-###Install Sonar Server
+### Install Sonar Server
 ```sudo apt-get update
 sudo apt-get -y upgrade
 sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt/ `lsb_release -cs`-pgdg main" >> /etc/apt/sources.list.d/pgdg.list'
