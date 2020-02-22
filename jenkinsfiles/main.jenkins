@@ -19,9 +19,8 @@ node
 	
 	stage ('Build')
 	{
-		steps
+		script
 		{
-			echo '---------BUILD---------'
 			sh 'pwd'
 		}
 	}
