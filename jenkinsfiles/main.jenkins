@@ -2,14 +2,14 @@ node
 {
 	stage ('Code Checkout') 
 	{
-		checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: '84ce58d7-68e6-4b4d-91c7-887cda9b70cb', url: 'git@github.com:AlexViki/laba7_jenkins_sonarqube.git']]])	}
-	stage ('Code Quality')
-	{
+		checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'git', url: 'git@github.com:AlexViki/laba7_jenkins_sonarqube.git']]])
+	}
+	stage ('Code Quality') {
 		script {
 			def scannerHome = tool 'SonarQubeScaner';
 			withSonarQubeEnv("SonarQubeServer") {
 			sh "${tool("SonarQubeScaner")}/bin/sonar-scanner"
                }
-            }
+        }
 	}
 }
