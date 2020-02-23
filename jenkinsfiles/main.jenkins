@@ -1,11 +1,4 @@
-node
-{
-	stage ('Code Checkout') 
-	{
-		checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'git', url: 'git@github.com:AlexViki/laba7_jenkins_sonarqube.git']]])
-	}
-	
-	stage ('Code Quality')
+stage ('Code Quality')
 	{
 		script
 		{
