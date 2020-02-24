@@ -17,7 +17,7 @@ node
         }
 	}
 	
-	stage ('Build')
+	stage ('Build Sonar Gate')
 	{
 		script
 		{
